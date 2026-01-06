@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+
+{% if result is defined %}
+    <h1>Based on the marks you have {{ result }}</h1>
+{% endif %}
+
+{% if results is defined %}
+    {% for key, value in results.items() %}
+        <h2>{{ key }} : {{ value }}</h2>
+    {% endfor %}
+{% endif %}
+
+{% if resultif is defined %}
+    {% if resultif >= 50 %}
+        <h1>You have passed with marks {{ resultif }}</h1>
+    {% else %}
+        <h2>You have failed with marks {{ resultif }}</h2>
+    {% endif %}
+{% endif %}
+
+</body>
+</html>
